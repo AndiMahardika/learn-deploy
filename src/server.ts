@@ -166,6 +166,10 @@ app.get("/resources", async (req, res) => {
   // console.log({ accessToken, refreshToken });
 });
 
+app.get("/", (req, res) => {
+  return res.json({ message: "Hello World" });
+})
+
 app.listen(process.env.PORT, () => {
   console.log(`Server running at port : ${process.env.PORT}`);
 });
